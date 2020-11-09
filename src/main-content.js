@@ -4,13 +4,13 @@ import { Modal } from "react-responsive-modal";
 import SignUpForm from "./signup-form";
 
 const MainContent = () => {
-  const [showState1, setShowState1] = useState(false);
+  const [showStateSignup, setShowStateSignup] = useState(false);
 
-  const onOpenModal1 = () => {
-    setShowState1(true);
+  const onOpenModalSignup = () => {
+    setShowStateSignup(true);
   };
-  const onCloseModal1 = () => {
-    setShowState1(false);
+  const onCloseModalSignup = () => {
+    setShowStateSignup(false);
   };
   return (
     <div className="main-content">
@@ -23,13 +23,14 @@ const MainContent = () => {
       <center>
         <button
           className="login-button content-btn"
-          onClick={() => onOpenModal1()}
+          onClick={() => onOpenModalSignup()}
         >
           Get Started
         </button>
         <Modal
-          open={showState1}
-          onClose={() => onCloseModal1()}
+          modalId="signup-modal"
+          open={showStateSignup}
+          onClose={() => onCloseModalSignup()}
           classNames="sign-up-modal"
         >
           <SignUpForm />

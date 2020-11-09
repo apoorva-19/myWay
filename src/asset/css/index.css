@@ -163,9 +163,42 @@ nav {
   color: var(--clr-primary-1);
   transform: rotate(90deg);
 }
+.for-you {
+  float: right;
+  padding-left: 0.25rem;
+  background-repeat: no-repeat;
+}
+.for-you span {
+  padding-right: 1rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-left: -7rem;
+  margin-top: 3.5rem;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
 
 .instant-apply {
-  background-image: url("asset/images/Instant\ logo.png");
+  background-image: url("../images/Instant\ logo.png");
   background-repeat: no-repeat;
   padding-left: 30px; /* width of the image plus a little extra padding */
   display: block; /* may not need this, but I've found I do */
@@ -246,6 +279,26 @@ nav {
     margin-left: 20rem;
     margin-right: 20rem;
   }
+
+  #signup-modal {
+    width: 600px;
+    border-radius: 20px;
+    margin: 10rem 0 0 30rem !important;
+  }
+
+  #login-modal {
+    height: 100%;
+  }
+
+  .row {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  .half {
+    width: 50%;
+    padding-right: 0.25rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .main-content {
@@ -293,9 +346,6 @@ nav {
   width: 800px;
 }
 
-.react-responsive.modal {
-  width: 500px !important;
-}
 .form {
   margin: 2rem 5rem 2rem 5rem;
   padding: 1rem 2rem;
@@ -305,7 +355,7 @@ nav {
   background: var(--clr-white);
   border: 1px solid #707070;
   border-radius: var(--radius);
-  padding: 0.5rem 3.5rem 0.5rem 3.5rem;
+  padding: 0.75rem 0 0.75rem 0.5rem;
 }
 .form-control {
   margin: 0.5rem 0;
@@ -317,18 +367,17 @@ nav {
   display: inline-block;
   background: #7ecb20;
   color: var(--clr-white);
+  font-size: 22px;
   border-color: transparent;
   margin-top: 1rem;
-  padding: 0.15rem 0.25rem;
   cursor: pointer;
-  width: inherit;
-  padding: 0.25rem 7rem 0.25rem 7rem;
+  padding: 1rem 7rem 1rem 7rem;
   border-radius: 4px;
 }
 
 .box {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   border: 1px solid #cecece;
   padding: 1rem;
 }
