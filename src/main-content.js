@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import SignUpForm from "./signup-form";
+import OtpForm from "./otp-form";
+import Thankyou from "./thank-you";
 
 const MainContent = () => {
   const [showStateSignup, setShowStateSignup] = useState(false);
@@ -34,7 +36,17 @@ const MainContent = () => {
           classNames="sign-up-modal"
         >
           <SignUpForm />
+          {/* <OtpForm /> */}
+          {/* <Thankyou /> */}
         </Modal>
+        {/* <Modal
+          modalId="otp-modal"
+          open={showStateOtp}
+          onClose={() => onCloseModalOtp()}
+          classNames="sign-up-modal"
+        >
+          <OtpForm />
+        </Modal> */}
       </center>
     </div>
   );

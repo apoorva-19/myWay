@@ -28,6 +28,7 @@ const OtpForm = () => {
               onChange={handleChange}
             />
           </div>
+          <p>Otp has been sent to you email id: abc@xyz.in</p>
           <button className="" type="submit" onClick={handleSubmit}>
             Sign Up
           </button>
